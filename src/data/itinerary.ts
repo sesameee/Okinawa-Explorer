@@ -18,6 +18,8 @@ export interface DayStop {
   mapsUrl: string;
   schedule: StopSchedule;
   alternatives?: string[];
+  /** 站點備註（秀場次、訂位提醒等） */
+  note?: string;
 }
 
 export interface ItineraryDay {
@@ -76,7 +78,7 @@ export const ITINERARY: ItineraryData = {
     {
       dayNumber: 1,
       dateLabel: "2026/05/10（日）",
-      title: "那霸進場 -> 瀨長島 -> 恩納",
+      title: "那霸進場 - 瀨長島 - 恩納入住",
       baseHotel: { query: "BEB5 沖繩瀨良垣", label: "BEB5 沖繩瀨良垣", type: "hotel" },
       stops: [
         { idx: 0, id: "hotel_naha1", name: "BEB5 沖繩瀨良垣", type: "hotel", queryChoices: ["BEB5 沖繩瀨良垣"], mapsUrl: mapsQueryLink("BEB5 沖繩瀨良垣"), schedule: { start: "20:20", end: "21:30", isWindow: false } },
@@ -92,12 +94,22 @@ export const ITINERARY: ItineraryData = {
     {
       dayNumber: 2,
       dateLabel: "2026/05/11（ㄧ）",
-      title: "本部＋古宇利海景日",
+      title: "美麗海水族館 - 古宇利海景日",
       baseHotel: { query: "BEB5 沖繩瀨良垣", label: "BEB5 沖繩瀨良垣", type: "hotel" },
       stops: [
         { idx: 0, id: "hotel_naha1", name: "BEB5 沖繩瀨良垣", type: "hotel", queryChoices: ["BEB5 沖繩瀨良垣"], mapsUrl: mapsQueryLink("BEB5 沖繩瀨良垣"), schedule: { start: "07:30", end: "08:30", isWindow: false } },
         { idx: 1, id: "camel_sandwich", name: "CAMEL SANDWICH & SMOOTHIE（早餐）", type: "meal", queryChoices: ["CAMEL SANDWICH & SMOOTHIE 278-1 Urasaki, Motobu, Kunigami District, Okinawa 905-0217日本", "CAMEL SANDWICH & SMOOTHIE 本部町 浦崎 278-1"], mapsUrl: mapsQueryLink("CAMEL SANDWICH & SMOOTHIE 278-1 Urasaki, Motobu, Kunigami District, Okinawa 905-0217日本"), schedule: { start: "08:45", end: "09:20", isWindow: true }, alternatives: ["278-1 Urasaki, Motobu"] },
-        { idx: 2, id: "ocean_expo", name: "沖繩美麗海水族館", type: "attraction", queryChoices: ["沖繩美麗海水族館"], mapsUrl: mapsQueryLink("沖繩美麗海水族館"), schedule: { start: "09:30", end: "12:30", isWindow: true }, alternatives: ["沖繩海洋博公園"] },
+        {
+          idx: 2,
+          id: "ocean_expo",
+          name: "沖繩美麗海水族館",
+          type: "attraction",
+          queryChoices: ["沖繩美麗海水族館"],
+          mapsUrl: mapsQueryLink("沖繩美麗海水族館"),
+          schedule: { start: "09:30", end: "12:30", isWindow: true },
+          alternatives: ["沖繩海洋博公園"],
+          note: "海豚秀\n開始時間：10:30 / 11:30 / 13:00 / 15:00 / 17:00",
+        },
         { idx: 3, id: "umigojuku", name: "食堂海路（午餐）", type: "meal", queryChoices: ["食堂海路 沖繩"], mapsUrl: mapsQueryLink("食堂海路 沖繩"), schedule: { start: "12:40", end: "14:40", isWindow: true }, alternatives: ["海路 食堂 本部"] },
         { idx: 4, id: "kouri_view", name: "古宇利大橋 南端觀景台", type: "attraction", queryChoices: ["古宇利大橋 南端 觀景台"], mapsUrl: mapsQueryLink("古宇利大橋 南端觀景台"), schedule: { start: "15:20", end: "15:50", isWindow: true }, alternatives: ["古宇利島 展望台"] },
         { idx: 5, id: "kouri_tower", name: "古宇利海洋塔", type: "attraction", queryChoices: ["古宇利海洋塔"], mapsUrl: mapsQueryLink("古宇利海洋塔"), schedule: { start: "16:00", end: "17:30", isWindow: true }, alternatives: ["古宇利島 海洋塔"] },
@@ -110,7 +122,7 @@ export const ITINERARY: ItineraryData = {
     {
       dayNumber: 3,
       dateLabel: "2026/05/12（二）",
-      title: "名護同區順路日",
+      title: "恩納海灘玩水 - 萬座毛 - 部瀬名海中公園賞魚",
       baseHotel: { query: "BEB5 沖繩瀨良垣", label: "BEB5 沖繩瀨良垣", type: "hotel" },
       stops: [
         { idx: 0, id: "hotel_naha1", name: "BEB5 沖繩瀨良垣", type: "hotel", queryChoices: ["BEB5 沖繩瀨良垣"], mapsUrl: mapsQueryLink("BEB5 沖繩瀨良垣"), schedule: { start: "07:30", end: "08:30", isWindow: false } },
@@ -127,7 +139,7 @@ export const ITINERARY: ItineraryData = {
     {
       dayNumber: 4,
       dateLabel: "2026/05/13（三）",
-      title: "恩納退房 -> 南部文化 -> 那霸入住",
+      title: "恩納退房 - 南部文化 - 國際通吃燒肉",
       baseHotel: { query: "BEB5 沖繩瀨良垣", label: "BEB5 沖繩瀨良垣", type: "hotel" },
       stops: [
         { idx: 0, id: "hotel_naha1", name: "BEB5 沖繩瀨良垣", type: "hotel", queryChoices: ["BEB5 沖繩瀨良垣"], mapsUrl: mapsQueryLink("BEB5 沖繩瀨良垣"), schedule: { start: "08:30", end: "10:00", isWindow: false } },
@@ -136,7 +148,7 @@ export const ITINERARY: ItineraryData = {
         { idx: 3, id: "hoppepan_lunch", name: "hoppepan 麵包店", type: "meal", queryChoices: ["ホッペパン"], mapsUrl: mapsQueryLink("ホッペパン"), schedule: { start: "14:10", end: "14:50", isWindow: true }, alternatives: ["hoppepan"] },
         { idx: 4, id: "hasn_ryu", name: "波上宮", type: "attraction", queryChoices: ["波上宮"], mapsUrl: mapsQueryLink("波上宮"), schedule: { start: "15:00", end: "15:50", isWindow: true }, alternatives: ["波上宮 周辺"] },
         { idx: 5, id: "hotel_naha2", name: "東急STAY沖繩那霸", type: "hotel", queryChoices: ["東急STAY沖縄 那覇"], mapsUrl: mapsQueryLink("東急STAY沖繩那霸"), schedule: { start: "16:10", end: "17:00", isWindow: false } },
-        { idx: 6, id: "dinner_yakiniku_or_ramen", name: "燒肉本部牧場 國際通店（已訂位）", type: "meal", queryChoices: ["燒肉本部 県庁前", "暖暮拉麵 那覇"], mapsUrl: mapsQueryLink("燒肉本部 県庁前"), schedule: { start: "18:00", end: "20:00", isWindow: true }, alternatives: ["暖暮拉麵 沖繩", "燒肉本部 沖繩"] },
+        { idx: 6, id: "dinner_yakiniku_or_ramen", name: "燒肉本部牧場 國際通店（已訂位18:30）", type: "meal", queryChoices: ["燒肉本部 県庁前", "暖暮拉麵 那覇"], mapsUrl: mapsQueryLink("燒肉本部 県庁前"), schedule: { start: "18:00", end: "20:00", isWindow: true }, alternatives: ["暖暮拉麵 沖繩", "燒肉本部 沖繩"] },
       ],
       order: [0, 1, 2, 3, 4, 5, 6],
       travelMode: ROUTE_MODE_BY_DAY[4],
@@ -145,12 +157,12 @@ export const ITINERARY: ItineraryData = {
     {
       dayNumber: 5,
       dateLabel: "2026/05/14（四）",
-      title: "購物＋兒童放電日",
+      title: "沖繩兒童王國 - 永旺夢樂城Shopping",
       baseHotel: { query: "東急STAY沖繩那霸", label: "東急STAY沖繩那霸", type: "hotel" },
       stops: [
         { idx: 0, id: "hotel_naha2", name: "東急STAY沖繩那霸", type: "hotel", queryChoices: ["東急STAY沖縄 那覇"], mapsUrl: mapsQueryLink("東急STAY沖繩那霸"), schedule: { start: "07:30", end: "08:30", isWindow: false } },
         { idx: 1, id: "kids_kingdom", name: "沖繩兒童王國", type: "attraction", queryChoices: ["沖繩兒童王國"], mapsUrl: mapsQueryLink("沖縄こどもの国"), schedule: { start: "09:15", end: "11:45", isWindow: true }, alternatives: ["沖繩兒童王國 こどもの国"] },
-        { idx: 2, id: "aeon_mall_kokuren", name: "永旺夢樂城沖繩來客夢（午餐/放電/採買）", type: "meal", queryChoices: ["永旺夢樂城沖繩來客夢 レストラン街", "AEON MALL Okinawa Kouri-mu"], mapsUrl: mapsQueryLink("永旺夢樂城沖繩來客夢"), schedule: { start: "12:00", end: "18:00", isWindow: true }, alternatives: ["AEON MALL Okinawa Koki-mu レストラン"] },
+        { idx: 2, id: "aeon_mall_kokuren", name: "永旺夢樂城沖繩來客夢（午餐/採買）", type: "meal", queryChoices: ["永旺夢樂城沖繩來客夢 レストラン街", "AEON MALL Okinawa Kouri-mu"], mapsUrl: mapsQueryLink("永旺夢樂城沖繩來客夢"), schedule: { start: "12:00", end: "18:00", isWindow: true }, alternatives: ["AEON MALL Okinawa Koki-mu レストラン"] },
         { idx: 3, id: "birthday_yamazato", name: "Birthday Yamazato", type: "meal", queryChoices: ["Birthday Yamazato 日本〒904-0033 Okinawa, Yamazato, 1 Chome−1−2 パーチェ山里 ２階"], mapsUrl: mapsQueryLink("Birthday Yamazato 日本〒904-0033 Okinawa, Yamazato, 1 Chome−1−2 パーチェ山里 ２階"), schedule: { start: "18:00", end: "18:25", isWindow: true }, alternatives: ["Birthday Yamazato Okinawa Yamazato"] },
         { idx: 4, id: "dinner_yakiniku", name: "燒肉本部（縣廳前）-- 不確定", type: "meal", queryChoices: ["燒肉本部 県庁前"], mapsUrl: mapsQueryLink("燒肉本部 県庁前"), schedule: { start: "18:30", end: "20:30", isWindow: true }, alternatives: ["燒肉本部 沖繩 ランチ ディナー"] },
       ],
@@ -161,7 +173,7 @@ export const ITINERARY: ItineraryData = {
     {
       dayNumber: 6,
       dateLabel: "2026/05/15（五）",
-      title: "還車後那霸/浦添輕鬆日（無車可Uber）",
+      title: "還車後那霸 - 公園 - PARCO CITY （無車可Uber）",
       baseHotel: { query: "東急STAY沖繩那霸", label: "東急STAY沖繩那霸", type: "hotel" },
       stops: [
         { idx: 0, id: "hotel_naha2", name: "東急STAY沖繩那霸", type: "hotel", queryChoices: ["東急STAY沖縄 那覇"], mapsUrl: mapsQueryLink("東急STAY沖繩那霸"), schedule: { start: "07:30", end: "08:30", isWindow: false } },
@@ -177,7 +189,7 @@ export const ITINERARY: ItineraryData = {
     {
       dayNumber: 7,
       dateLabel: "2026/05/16（六）",
-      title: "返程日",
+      title: "國際通 - 返程",
       baseHotel: { query: "東急STAY沖繩那霸", label: "東急STAY沖繩那霸", type: "hotel" },
       stops: [
         { idx: 0, id: "hotel_naha2", name: "東急STAY沖繩那霸", type: "hotel", queryChoices: ["東急STAY沖縄 那覇"], mapsUrl: mapsQueryLink("東急STAY沖繩那霸"), schedule: { start: "07:30", end: "10:30", isWindow: false } },
@@ -201,4 +213,14 @@ export const MUST_EAT: MustEatItem[] = [
   { title: "燒肉本部牧場 國際通店", daySuggested: 4, query: ["燒肉本部牧場 國際通店 日本〒900-0014 Okinawa, Naha, Matsuo, 1 Chome−1−2 マルイト那覇松尾ビル ２階"], scheduleHint: { start: "18:00", end: "20:00" } },
   { title: "Sumanumeh拉麵", daySuggested: 4, query: ["Sumanumeh 40-1 Kokuba, Naha, Okinawa 902-0075日本"], scheduleHint: { start: "12:10", end: "14:10" } },
   { title: "CAMEL SANDWICH & SMOOTHIE早餐", daySuggested: 2, query: ["CAMEL SANDWICH & SMOOTHIE早餐 278-1 Urasaki, Motobu, Kunigami District, Okinawa 905-0217日本"], scheduleHint: { start: "08:45", end: "09:20" } },
+  { title: "通堂拉麵", daySuggested: 4, query: ["通堂拉麵 日本〒902-0064 Okinawa, Naha, Yorimiya, 154-9 第２玉元ビル"], scheduleHint: { start: "11:30", end: "14:30" } },
+  { title: "福助的玉子燒", daySuggested: 4, query: ["福助的玉子燒 2 Chome-9-11 Matsuo, Naha, Okinawa 900-0014日本"], scheduleHint: { start: "11:00", end: "19:00" } },
+  {
+    title: "花商 花生豆腐專門店",
+    daySuggested: 4,
+    query: ["花商 花生豆腐專門店 日本〒900-0014 Okinawa, Naha, Matsuo, 2 Chome−21−7 新天地市場通り（本店）"],
+    scheduleHint: { start: "11:00", end: "19:00" },
+  },
+  { title: "南星莎布翁", daySuggested: 6, query: ["南星莎布翁 1 Chome-3-50 Makishi, Naha, Okinawa 900-0013日本"], scheduleHint: { start: "11:00", end: "19:00" } },
+  { title: "阿古豬拉麵", daySuggested: 2, query: ["阿古豬拉麵 479番地 Toyohara, Motobu, Kunigami District, Okinawa 905-0204日本"], scheduleHint: { start: "11:00", end: "14:30" } },
 ];

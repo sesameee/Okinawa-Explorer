@@ -147,6 +147,9 @@ export function TripDaySection({
               <div className="text-lg text-slate-100 font-bold mt-1">
                 {displayNumberByStopIdx.get(stopIdx) ?? stop.idx}. {resolvedName}
               </div>
+              {stop.note ? (
+                <p className="text-sm text-slate-400 mt-2 leading-relaxed whitespace-pre-wrap">{stop.note}</p>
+              ) : null}
               <a
                 href={stop.mapsUrl}
                 target="_blank"

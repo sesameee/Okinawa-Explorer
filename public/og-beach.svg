@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Okinawa beach preview image">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#59c5ff" />
+      <stop offset="65%" stop-color="#bcecff" />
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#35c9df" />
+      <stop offset="100%" stop-color="#009ec2" />
+    </linearGradient>
+    <linearGradient id="sand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffe5a6" />
+      <stop offset="100%" stop-color="#ffd788" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#sky)" />
+  <circle cx="975" cy="120" r="58" fill="#fff2a8" />
+
+  <path d="M0 300 C 260 260, 430 320, 700 290 C 900 270, 1040 315, 1200 295 L1200 470 L0 470 Z" fill="url(#sea)" />
+  <path d="M0 350 C 250 320, 470 380, 760 350 C 930 332, 1080 365, 1200 352" stroke="#baf6ff" stroke-width="6" fill="none" opacity="0.75" />
+  <path d="M0 460 C 250 435, 520 498, 840 470 C 1010 455, 1130 475, 1200 470 L1200 630 L0 630 Z" fill="url(#sand)" />
+
+  <path d="M78 465 C 170 438, 258 437, 330 468 C 238 478, 152 482, 78 465 Z" fill="#f8f4ef" opacity="0.92" />
+  <path d="M830 505 C 930 482, 1040 485, 1152 520 C 1040 536, 927 536, 830 505 Z" fill="#f8f4ef" opacity="0.86" />
+
+  <g fill="#2f8c53">
+    <path d="M120 188 C 235 198, 304 104, 355 38 C 332 116, 268 232, 120 188 Z" />
+    <path d="M92 160 C 190 189, 278 148, 376 86 C 296 174, 212 232, 92 160 Z" />
+    <path d="M1080 132 C 980 178, 891 165, 801 112 C 900 122, 992 106, 1080 132 Z" />
+    <path d="M1120 160 C 1020 212, 918 220, 816 206 C 925 176, 1022 141, 1120 160 Z" />
+  </g>
+</svg>
