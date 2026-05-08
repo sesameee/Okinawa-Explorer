@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #E2B170;
+  --color-secondary: #FE8E8B;
+  --color-navy-950: #020617;
+  --color-navy-900: #0F172A;
+  --color-navy-800: #1E293B;
+  --color-navy-700: #334155;
+  
+  --shadow-gold: 0 20px 40px -12px rgba(226, 177, 112, 0.2);
+}
+
+@layer base {
+  body {
+    @apply bg-navy-900 text-slate-50 font-sans antialiased;
+  }
+}
+
+.scrapbook-card {
+  @apply bg-navy-800 rounded-[24px] border border-primary/10 shadow-2xl overflow-hidden;
+}
+
+.timeline-line::before {
+  content: '';
+  @apply absolute left-[11px] top-[24px] bottom-0 w-[1px];
+  background: linear-gradient(to bottom, #E2B170 0, rgba(226, 177, 112, 0) 100%);
+}
